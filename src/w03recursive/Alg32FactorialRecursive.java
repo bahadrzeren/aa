@@ -1,26 +1,28 @@
-package aa;
+package w03recursive;
 
 /**
  * 
  * @author bahadr
  *
  */
-public class aa01FactorialLinear {
+public class Alg32FactorialRecursive {
 
 	public static int[] inputs = {1, 2, 3, 5, 10};
 
 	public static int getFactorial(int n) {
-		int returnValue = 1;			//	1
-		for (int i = 2; i <= n; i++)	//	n
-			returnValue *= i;			//	n - 1
-		return returnValue;				//	1
+		if (n == 1)							//	1
+			return 1;
+		return n * getFactorial(n - 1);		//	T(n - 1)
 	}
 
 	/*
 	 * TIME COMPLEXITY
 	 * 
-	 * T(n) = 2n+1	=>	O(n)
+	 * T(n) = 1 + T(n - 1)
+	 * 		= n + T(0)
+	 * 		= n + c		=>	O(n)
 	 * 
+	 * where c = constant.
 	 */
 
 	public static void main(String[] args) {
