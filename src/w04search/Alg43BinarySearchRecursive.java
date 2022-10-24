@@ -5,7 +5,7 @@ package w04search;
  * @author bahadr
  *
  */
-public class Alg42BinarySearchRecursive {
+public class Alg43BinarySearchRecursive {
 
 	public static int[] inputs = {1,3,4,8,10,13,19,20,25,29,30,32,36,37,41,44,49,50,52,53,56,58,59,63,66};
 
