@@ -7,9 +7,9 @@ package w04search;
  */
 public class Alg42BinarySearch {
 
-	public static int[] inputs = {1,3,4,8,10,13,19,20,25,29,30,32,36,37,41,44,49,50,52,53,56,58,59,63,66};
+	private static int[] inputs = {1,3,4,8,10,13,19,20,25,29,30,32,36,37,41,44,49,50,52,53,56,58,59,63,66};
 
-	public static int findItem(int value) {
+	private static int findItem(int value) {
 		int lo = 0;							//	1
 		int hi = inputs.length - 1;			//	1
 

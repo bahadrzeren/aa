@@ -7,9 +7,9 @@ package w03recursive;
  */
 public class Alg33FibonacciLinear {
 
-	public static int[] inputs = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+	private static int[] inputs = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 
-	public static int getFibonacci(int n) {
+	private static int getFibonacci(int n) {
 		if (n == 0)											//	1
 			return 0;
 		int previousValue = 0;								//	1

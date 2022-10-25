@@ -1,14 +1,11 @@
 package w04search;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * 
  * @author bahadr
  *
  */
-public class Alg44BreathFirstSearch {
+public class Alg44DepthFirstSearch {
 
 	private static int[][] inputs = {{0, 1, 2, 3},
 										{1, 11, 12},
@@ -41,16 +38,10 @@ public class Alg44BreathFirstSearch {
 													{3333, 33331, 33332}
 									};
 
-	private static void traverseTheTree(Alg44Node root) {
-		Queue<Alg44Node> nodeQueue = new LinkedList<Alg44Node>();
-		nodeQueue.add(root);
-		while (!nodeQueue.isEmpty()) {
-			Alg44Node node = nodeQueue.poll();
-			System.out.println(node.getValue());
-			for (Alg44Node childNode: node.getChildren()) {
-				nodeQueue.add(childNode);
-			}
-		}
+	private static void traverseTheTree(Alg44Node node) {
+		System.out.println(node.getValue());
+		for (Alg44Node childNode: node.getChildren())
+			traverseTheTree(childNode);
 	}
 
 	/*
