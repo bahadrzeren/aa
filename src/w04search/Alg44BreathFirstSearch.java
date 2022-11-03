@@ -41,7 +41,7 @@ public class Alg44BreathFirstSearch {
 													{3333, 33331, 33332}
 									};
 
-	private static void traverseTheTree(Alg44Node root) {
+	private static void traverseOnTheTree(Alg44Node root) {
 		Queue<Alg44Node> nodeQueue = new LinkedList<Alg44Node>();
 		nodeQueue.add(root);
 		while (!nodeQueue.isEmpty()) {
@@ -64,6 +64,6 @@ public class Alg44BreathFirstSearch {
 
 	public static void main(String[] args) {
 		Alg44Node root = Alg44Node.buildTree(inputs);
-		traverseTheTree(root);
+		traverseOnTheTree(root);
 	}
 }

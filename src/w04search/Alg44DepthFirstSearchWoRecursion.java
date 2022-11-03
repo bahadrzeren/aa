@@ -5,7 +5,7 @@ package w04search;
  * @author bahadr
  *
  */
-public class Alg44DepthFirstSearch {
+public class Alg44DepthFirstSearchWoRecursion {
 
 	private static int[][] inputs = {{0, 1, 2, 3},
 										{1, 11, 12},
