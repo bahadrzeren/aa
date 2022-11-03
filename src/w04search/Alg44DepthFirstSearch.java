@@ -39,15 +39,17 @@ public class Alg44DepthFirstSearch {
 									};
 
 	private static void traverseTheTree(Alg44Node node) {
-		System.out.println(node.getValue());
+		System.out.println(node.getValue());				//	V
 		for (Alg44Node childNode: node.getChildren())
-			traverseTheTree(childNode);
+			traverseTheTree(childNode);						//	E
 	}
 
 	/*
 	 * TIME COMPLEXITY
 	 * 
-	 * ???
+	 * T(N) = V + E
+	 * 
+	 * O(V + E)
 	 * 
 	 */
 

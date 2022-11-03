@@ -44,6 +44,6 @@ public class Alg43BinarySearchRecursive {
 
 		for (int searchValue : inputs)
 			System.out.println(searchValue + " index = " + findItem(searchValue, lo, hi));
-		System.out.println(64 + " index = " + findItem(64, lo, hi));
+		System.out.println(65 + " index = " + findItem(64, lo, hi));
 	}
 }

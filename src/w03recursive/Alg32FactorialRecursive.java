@@ -7,7 +7,7 @@ package w03recursive;
  */
 public class Alg32FactorialRecursive {
 
-	private static int[] inputs = {1, 2, 3, 5, 10};
+	private static int[] inputs = {1, 2, 3, 5, 10, 11};
 
 	private static int getFactorial(int n) {
 		if (n == 1)							//	1

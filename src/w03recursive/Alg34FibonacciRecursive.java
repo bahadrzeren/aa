@@ -38,6 +38,6 @@ public class Alg34FibonacciRecursive {
 
 	public static void main(String[] args) {
 		for (int inputValue : inputs)
-			System.out.println(inputValue + "! = " + getFibonacci(inputValue));
+			System.out.println(inputValue + "th fibonacci = " + getFibonacci(inputValue));
 	}
 }

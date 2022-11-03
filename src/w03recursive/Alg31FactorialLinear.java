@@ -7,7 +7,7 @@ package w03recursive;
  */
 public class Alg31FactorialLinear {
 
-	private static int[] inputs = {1, 2, 3, 5, 10};
+	private static int[] inputs = {1, 2, 3, 5, 10, 12};
 
 	private static int getFactorial(int n) {
 		int returnValue = 1;			//	1

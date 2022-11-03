@@ -45,10 +45,10 @@ public class Alg44BreathFirstSearch {
 		Queue<Alg44Node> nodeQueue = new LinkedList<Alg44Node>();
 		nodeQueue.add(root);
 		while (!nodeQueue.isEmpty()) {
-			Alg44Node node = nodeQueue.poll();
+			Alg44Node node = nodeQueue.poll();					//	V
 			System.out.println(node.getValue());
 			for (Alg44Node childNode: node.getChildren()) {
-				nodeQueue.add(childNode);
+				nodeQueue.add(childNode);						//	E
 			}
 		}
 	}
@@ -56,7 +56,9 @@ public class Alg44BreathFirstSearch {
 	/*
 	 * TIME COMPLEXITY
 	 * 
-	 * ???
+	 * T(n) = V + E
+	 * 
+	 * O(V + E)
 	 * 
 	 */
 
