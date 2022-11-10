@@ -25,7 +25,7 @@ public class Alg53Insertion {
 		for (int i = 1; i < inputs.length; i++) {				//	n
 			int elementToSort = inputs[i];						//	n-1
 			int j = i - 1;										//	n-1
-			while ((j >= 0) && (inputs[j] > elementToSort)) {	//	(n-1)*n/2 + 1
+			while ((j >= 0) && (inputs[j] > elementToSort)) {	//	(n-1)*n/2 + n-1
 				inputs[j + 1] = inputs[j];						//	(n-1)*n/2
 				j--;											//	(n-1)*n/2
 				inputs[j + 1] = elementToSort;					//	(n-1)*n/2
