@@ -20,21 +20,23 @@ public class Alg51Selection {
 	 * 1 7 10 14 24 28 35 36 43 49 51 55 62 67 71 78 81 88 92 99 
 	 */
 	private static void sort() {
-		for (int i = 0; i < inputs.length - 1; i++) {
-			int minValueNdx = i;
-			for (int j = i + 1; j < inputs.length; j++)
-				if (inputs[j] < inputs[minValueNdx])
+		for (int i = 0; i < inputs.length - 1; i++) {	//	n
+			int minValueNdx = i;						//	n-1
+			for (int j = i + 1; j < inputs.length; j++)	//	(n-1)*n/2 + 1
+				if (inputs[j] < inputs[minValueNdx])	//	(n-1)*n/2
 					minValueNdx = j;
-			int tempValue = inputs[i];
-			inputs[i] = inputs[minValueNdx];
-			inputs[minValueNdx] = tempValue;
+			int tempValue = inputs[i];					//	n-1
+			inputs[i] = inputs[minValueNdx];			//	n-1
+			inputs[minValueNdx] = tempValue;			//	n-1
 		}
 	}
 
 	/*
 	 * TIME COMPLEXITY
 	 * 
+	 * T(n) ~ n^2+4n-3
 	 * 
+	 * => O(n^2)
 	 * 
 	 */
 

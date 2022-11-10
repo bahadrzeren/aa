@@ -68,15 +68,24 @@ public class Alg55Merge {
 			sort(left, mid);
 			sort(mid + 1, right);
 
-			merge(left, mid, right);
+			merge(left, mid, right);				
 		}
 	}
 
 	/*
 	 * TIME COMPLEXITY
 	 * 
+	 * T(n) ~ 1 + 2*T(n/2) + n
+	 * 		~ 3 + 4*T(n/4) + 2n
+	 * 		~ 7 + 8*T(n/8) + 3n
+	 * 		...
+	 * 		~ 2^k-1 + 2^k*T(n/2^k) + k*n
 	 * 
+	 * k = log2(n) =>
 	 * 
+	 * 		~ n-1 + n*T(1) + n*log2(n)
+	 * 
+	 * => O(n*log2(n))
 	 */
 
 	public static void main(String[] args) {

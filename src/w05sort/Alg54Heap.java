@@ -60,23 +60,25 @@ public class Alg54Heap {
 
 	private static void sort() {
 		//	Build
-		for (int i = inputs.length / 2 - 1; i >= 0; i--)
-			heapify(inputs.length, i);
+		for (int i = inputs.length / 2 - 1; i >= 0; i--)	//	~ n/2
+			heapify(inputs.length, i);						//	~ n/2*log2(n)
 
 		//	Sort
-		for (int i = inputs.length - 1; i > 0; i--) {
-			int temp = inputs[0];
-			inputs[0] = inputs[i];
-			inputs[i] = temp;
+		for (int i = inputs.length - 1; i > 0; i--) {		//	n
+			int temp = inputs[0];							//	n-1
+			inputs[0] = inputs[i];							//	n-1
+			inputs[i] = temp;								//	n-1
  
-			heapify(i, 0);
+			heapify(i, 0);									//	~ n*log2(n)
 		}
 	}
 
 	/*
 	 * TIME COMPLEXITY
 	 * 
+	 * T(n) ~ 3/2n*log2(n)+9/2n-3
 	 * 
+	 * => O(n*log2(n))
 	 * 
 	 */
 

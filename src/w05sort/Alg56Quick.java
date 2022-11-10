@@ -53,8 +53,17 @@ public class Alg56Quick {
 	/*
 	 * TIME COMPLEXITY
 	 * 
+	 * T(n) ~ n + 2*T(n/2)
+	 * 		~ 2n + 4*T(n/4)
+	 * 		~ 3n + 8*T(n/8)
+	 * 		...
+	 * 		~ k*n + 2^k*T(n/2^k)
 	 * 
+	 * k = log2(n) =>
 	 * 
+	 * 		~ n*log2(n) + n*T(1)
+	 * 
+	 * => O(n*log2(n))
 	 */
 
 	public static void main(String[] args) {

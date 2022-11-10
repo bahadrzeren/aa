@@ -20,17 +20,17 @@ public class Alg52Bubble {
 	 * 1 7 10 14 24 28 35 36 43 49 51 55 62 67 71 78 81 88 92 99 
 	 */
 	private static void sort() {
-		for (int i = 0; i < inputs.length - 1; i++) {
-			boolean swapped = false;
-			for (int j = 0; j < inputs.length - i - 1; j++) {
-				if (inputs[j] > inputs[j + 1]) {
+		for (int i = 0; i < inputs.length - 1; i++) {			//	n
+			boolean swapped = false;							//	n-1
+			for (int j = 0; j < inputs.length - i - 1; j++) {	//	(n-1)*n/2 + 1
+				if (inputs[j] > inputs[j + 1]) {				//	(n-1)*n/2
 					int tempValue = inputs[j];
 					inputs[j] = inputs[j + 1];
 					inputs[j + 1] = tempValue;
 					swapped = true;
 				}
 			}
-			if (!swapped)
+			if (!swapped)										//	n-1
 				break;
 		}
 	}
@@ -38,7 +38,9 @@ public class Alg52Bubble {
 	/*
 	 * TIME COMPLEXITY
 	 * 
+	 * T(n) ~ n^2+2n-1
 	 * 
+	 * => O(n^2)
 	 * 
 	 */
 
