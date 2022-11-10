@@ -22,7 +22,7 @@ public class Alg52Bubble {
 	private static void sort() {
 		for (int i = 0; i < inputs.length - 1; i++) {			//	n
 			boolean swapped = false;							//	n-1
-			for (int j = 0; j < inputs.length - i - 1; j++) {	//	(n-1)*n/2 + 1
+			for (int j = 0; j < inputs.length - i - 1; j++) {	//	(n-1)*n/2 + n-1
 				if (inputs[j] > inputs[j + 1]) {				//	(n-1)*n/2
 					int tempValue = inputs[j];
 					inputs[j] = inputs[j + 1];
