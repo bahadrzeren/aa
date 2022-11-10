@@ -22,7 +22,7 @@ public class Alg51Selection {
 	private static void sort() {
 		for (int i = 0; i < inputs.length - 1; i++) {	//	n
 			int minValueNdx = i;						//	n-1
-			for (int j = i + 1; j < inputs.length; j++)	//	(n-1)*n/2 + 1
+			for (int j = i + 1; j < inputs.length; j++)	//	(n-1)*n/2 + n-1
 				if (inputs[j] < inputs[minValueNdx])	//	(n-1)*n/2
 					minValueNdx = j;
 			int tempValue = inputs[i];					//	n-1
