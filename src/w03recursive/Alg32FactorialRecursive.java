@@ -19,6 +19,9 @@ public class Alg32FactorialRecursive {
 	 * TIME COMPLEXITY
 	 * 
 	 * T(n) = 1 + T(n - 1)
+	 * 		= 2 + T(n - 2)
+	 * 		= 3 + T(n - 3)
+	 * 		...
 	 * 		= n + T(0)
 	 * 		= n + c		=>	O(n)
 	 * 
