@@ -6,7 +6,11 @@ import java.util.List;
 /**
  * 
  * @author bahadr
- *
+ * 
+ ******************************************************
+ **** THIS CLASS WILL NOT BE NEITHER STUDIED NOR ASKED.
+ **** YOU CAN STUDY JUST IF YOU WOULD LIKE TO DO.
+ ******************************************************
  */
 public class Alg64NodeWParent {
 	private int value = -1;

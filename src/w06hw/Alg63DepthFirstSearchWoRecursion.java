@@ -41,6 +41,10 @@ public class Alg63DepthFirstSearchWoRecursion {
 													{3333, 33331, 33332}
 									};
 
+	/******************************************************
+	 **** THIS CLASS WILL NOT BE NEITHER STUDIED NOR ASKED.
+	 **** YOU CAN STUDY JUST IF YOU WOULD LIKE TO DO.
+	 ******************************************************/
 	private static void traverseOnTheTree(Alg64NodeWParent root) {
 		int level = 0;
 		int direction = 1;
@@ -74,10 +78,6 @@ public class Alg63DepthFirstSearchWoRecursion {
 			if (level == 0)
 				break;
 		}
-
-//		System.out.println(node.getValue());				//	V
-//		for (Alg44NodeWParent childNode: node.getChildren())
-//			traverseOnTheTree(childNode);						//	E
 	}
 
 	/*
