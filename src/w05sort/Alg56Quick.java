@@ -27,41 +27,44 @@ public class Alg56Quick {
 		inputs[j] = temp;
 	}
 
-	static int partition(int left, int right) {
-		int pivot = inputs[right];
+	private static int partition(int left, int right) {
+		/*
+		 * 4n + 7
+		 */
+		int pivot = inputs[right];				//	1
 
-		int i = left;
+		int i = left;							//	1
   
-		for (int j = left; j < right; j++) {
-			if (inputs[j] < pivot) {
-				swap(i, j);
-				i++;
+		for (int j = left; j < right; j++) {	//	n+1
+			if (inputs[j] < pivot) {			//	n
+				swap(i, j);						//	n
+				i++;							//	n
 			}
 		}
-		swap(i, right);
-		return i;
+		swap(i, right);							//	3
+		return i;								//	1
 	}
 
 	private static void sort(int left, int right) {
 		if (left < right) {
-			int partitionNdx = partition(left, right);
-			sort(left, partitionNdx - 1);
-			sort(partitionNdx + 1, right);
+			int partitionNdx = partition(left, right);	//	a.n + b
+			sort(left, partitionNdx - 1);				//	n/2
+			sort(partitionNdx + 1, right);				//	n/2
 		}
 	}
 
 	/*
 	 * TIME COMPLEXITY
 	 * 
-	 * T(n) ~ n + 2*T(n/2)
-	 * 		~ 2n + 4*T(n/4)
-	 * 		~ 3n + 8*T(n/8)
+	 * T(n) ~ 2*T(n/2) + a.n + b
+	 * 		~ 4*T(n/4) + 2a.n + 3b
+	 * 		~ 8*T(n/8) + 3a.n + 7b
 	 * 		...
-	 * 		~ k*n + 2^k*T(n/2^k)
+	 * 		~ 2^k*T(n/2^k) + k*a*n + (2^k-1)*b
 	 * 
 	 * k = log2(n) =>
 	 * 
-	 * 		~ n*log2(n) + n*T(1)
+	 * 		~ n*T(1) + a*n*log2(n) + (n-1)*b
 	 * 
 	 * => O(n*log2(n))
 	 */
