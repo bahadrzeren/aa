@@ -22,9 +22,9 @@ public class Alg56Quick {
 	 */
 
 	private static void swap(int i, int j) {
-		int temp = inputs[i];
-		inputs[i] = inputs[j];
-		inputs[j] = temp;
+		int temp = inputs[i];					//	1
+		inputs[i] = inputs[j];					//	1
+		inputs[j] = temp;						//	1
 	}
 
 	private static int partition(int left, int right) {
