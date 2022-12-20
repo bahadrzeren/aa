@@ -1,11 +1,11 @@
-package w12greedy;
+package w09dandc;
 
 /**
  * 
  * @author bahadr
  *
  */
-public class Alg126BinaryKnapsack {
+public class Alg95BinaryKnapsack {
 
 	/*
 	 * Greedy problem: Given weights and values of N items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack.
