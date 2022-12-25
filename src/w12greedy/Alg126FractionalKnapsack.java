@@ -20,8 +20,8 @@ public class Alg126FractionalKnapsack {
 		Arrays.sort(items, new Comparator<Alg126KnapsackItem>() {
             @Override
             public int compare(Alg126KnapsackItem item1, Alg126KnapsackItem item2) {
-                double cpr1 = ((1.0) * item1.getValue()) / item1.getValue();
-                double cpr2 = ((1.0) * item2.getValue()) / item2.getValue();
+                double cpr1 = ((1.0) * item1.getValue()) / item1.getWeight();
+                double cpr2 = ((1.0) * item2.getValue()) / item2.getWeight();
                  if (cpr1 < cpr2)
                     return 1;
                 else

@@ -40,16 +40,16 @@ public class Alg125JobSequencing {
 
 	public static void main(String[] args) {
         List<Alg125Job> jobs = new ArrayList<Alg125Job>();
-        jobs.add(new Alg125Job('a', 2, 100));
-        jobs.add(new Alg125Job('b', 1, 19));
-        jobs.add(new Alg125Job('c', 2, 27));
-        jobs.add(new Alg125Job('d', 1, 25));
-        jobs.add(new Alg125Job('e', 3, 15));
+//        jobs.add(new Alg125Job('a', 2, 100));	//	2
+//        jobs.add(new Alg125Job('b', 1, 19));
+//        jobs.add(new Alg125Job('c', 2, 27));	//	1
+//        jobs.add(new Alg125Job('d', 1, 25));
+//        jobs.add(new Alg125Job('e', 3, 15));	//	3
 
-//        jobs.add(new Alg125Job('a', 4, 20));
-//        jobs.add(new Alg125Job('b', 1, 10));
-//        jobs.add(new Alg125Job('c', 1, 40));
-//        jobs.add(new Alg125Job('d', 1, 30));
+        jobs.add(new Alg125Job('a', 4, 20));	//	4
+        jobs.add(new Alg125Job('b', 1, 10));
+        jobs.add(new Alg125Job('c', 1, 40));	//	1
+        jobs.add(new Alg125Job('d', 1, 30));
 
         Collections.sort(jobs, (a, b) -> b.getProfit() - a.getProfit());
 

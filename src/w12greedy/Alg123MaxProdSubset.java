@@ -22,7 +22,6 @@ public class Alg123MaxProdSubset {
 		int maxNegative = Integer.MIN_VALUE;
 
 		int countNegatives = 0;
-		int countPositives = 0;
 		int countZeros = 0;
 
 		int product = 1;
@@ -35,24 +34,21 @@ public class Alg123MaxProdSubset {
 					countNegatives++;
 					if (maxNegative < a[i])
 						maxNegative = a[i];
-				} else
-					if (a[i] > 0)
-						countPositives++;
+				}
 				product *= a[i];
 			}
 		}
 
-		if ((countZeros == a.length)
-				|| ((countPositives == 0)
-						&& (countZeros > 0)))
+		if (countZeros == a.length)
 			return 0;
 
-		if (countPositives == 0)
-			return maxNegative;
-
-		if ((countNegatives % 2 == 1)
-				&& (countNegatives != 0))
+		if (countNegatives % 2 == 1) {
+			if ((countNegatives == 1)
+					&& (countZeros > 0)
+					&& (countZeros + countNegatives > 0))
+				return 0;
 			product /= maxNegative;
+		}
 
 		return product;
 	}

@@ -22,7 +22,7 @@ public class Alg124ActivitySelection {
 	private static int[] finish = {2, 4, 6, 7, 9, 9};			//	Sorted according to finish times.
 
 	private static String printSelectedActivities(int[] s, int[] f) {
-		String result = "0";	//	The first activity always  gets selected!
+		String result = "0";	//	The first activity always gets selected!
 
 		int ndx = 0;
 		for (int i = 1; i < s.length; i++)
