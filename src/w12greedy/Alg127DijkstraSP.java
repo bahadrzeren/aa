@@ -10,16 +10,15 @@ public class Alg127DijkstraSP {
     private static int minDistance(int dist[], boolean sptSet[]) {
         int min = Integer.MAX_VALUE;
         int min_index = -1;
- 
+
         for (int i = 0; i < dist.length; i++)
             if ((sptSet[i] == false) && (dist[i] <= min)) {
                 min = dist[i];
                 min_index = i;
             }
- 
+
         return min_index;
     }
- 
 
     public static void dijkstra(int graph[][], int src) {
         int dist[] = new int[graph.length];	//	holds the shortest distance from src to i
@@ -52,13 +51,13 @@ public class Alg127DijkstraSP {
 
 	public static void main(String[] args) {
         int[][] graph = new int[][] {{0, 4, 0, 0, 0, 0, 0, 8, 0},
-									 {4, 0, 8, 0, 0, 0, 0, 11, 0},
+									 {4, 0, 8, 0, 0, 0, 0,11, 0},
 									 {0, 8, 0, 7, 0, 4, 0, 0, 2},
-									 {0, 0, 7, 0, 9, 14, 0, 0, 0},
-									 {0, 0, 0, 9, 0, 10, 0, 0, 0},
-									 {0, 0, 4, 14, 10, 0, 2, 0, 0},
+									 {0, 0, 7, 0, 9,14, 0, 0, 0},
+									 {0, 0, 0, 9, 0,10, 0, 0, 0},
+									 {0, 0, 4,14,10, 0, 2, 0, 0},
 									 {0, 0, 0, 0, 0, 2, 0, 1, 6},
-									 {8, 11, 0, 0, 0, 0, 1, 0, 7},
+									 {8,11, 0, 0, 0, 0, 1, 0, 7},
 									 {0, 0, 2, 0, 0, 0, 6, 7, 0}};
 		dijkstra(graph, 0);		
 	}
