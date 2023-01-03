@@ -1,5 +1,7 @@
 package w13dp;
 
+import java.util.Arrays;
+
 /**
  * 
  * @author bahadr
@@ -19,28 +21,32 @@ public class Alg95BinaryKnapsackDP {
 
 		int[] dp = new int[capacity + 1];	// making and initializing dp array
  
-        for (int i = 0; i < wt.length; i++) {
+		System.out.println(Arrays.toString(dp));
+
+		for (int i = 0; i < wt.length; i++) {
             for (int w = capacity; w >= 0; w--) {
                 if (wt[i] <= w)
                 	dp[w] = Math.max(dp[w], dp[w - wt[i]] + val[i]);
             }
+            System.out.println(Arrays.toString(dp));
         }
 
         return dp[capacity]; // returning the maximum value of knapsack
 	}
 
 /*
- * [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0]
- * [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60,  60]
- * [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160]
- * [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 180, 180, 180, 180, 180, 180, 180, 180, 180, 180, 220]
+ *  0  1   2   3   4   5
+ * [0, 0,  0,  0,  0,  0]
+ * [0, 6,  6,  6,  6,  6]
+ * [0, 6, 10, 16, 16, 16]
+ * [0, 6, 10, 16, 18, 22]
  * 
  */
 
 	public static void main(String[] args) {
-	    int values[] = new int[] {60, 100, 120};
-	    int weights[] = new int[] {10, 20, 30};
-	    int capacity = 50;
+	    int values[] = new int[] {6, 10, 12};
+	    int weights[] = new int[] {1, 2, 3};
+	    int capacity = 5;
 
 		System.out.println(knapsack(capacity, values, weights));
 	}
