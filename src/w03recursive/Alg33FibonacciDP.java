@@ -5,7 +5,7 @@ package w03recursive;
  * @author bahadr
  *
  */
-public class Alg33FibonacciLinear {
+public class Alg33FibonacciDP {
 
 	private static int[] inputs = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 

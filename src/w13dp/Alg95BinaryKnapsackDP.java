@@ -1,7 +1,5 @@
 package w13dp;
 
-import java.util.Arrays;
-
 /**
  * 
  * @author bahadr
@@ -21,14 +19,11 @@ public class Alg95BinaryKnapsackDP {
 
 		int[] dp = new int[capacity + 1];	// making and initializing dp array
  
-		System.out.println(Arrays.toString(dp));
-
 		for (int i = 0; i < wt.length; i++) {
             for (int w = capacity; w >= 0; w--) {
                 if (wt[i] <= w)
                 	dp[w] = Math.max(dp[w], dp[w - wt[i]] + val[i]);
             }
-            System.out.println(Arrays.toString(dp));
         }
 
         return dp[capacity]; // returning the maximum value of knapsack
